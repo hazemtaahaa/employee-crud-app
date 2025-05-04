@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.employee-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    color: #2c3e50;
+    margin-bottom: 0;
+    font-size: 2.5rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+}
+
+.employee-count {
+    background-color: #3498db;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1.5rem !important;
+    font-weight: 500 !important;
+}
+
+.table {
+    margin-top: 1.5rem;
+    font-size: 1.5rem !important;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1rem !important;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.table tbody tr td {
+    padding: 1rem !important;
+    vertical-align: middle;
+}
+.btn{
+    font-size:1.2rem;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: all 0.4s ease;
+}
+
+.action-buttons .btn {
+    min-width: 100px;
+    border-radius:0.95rem;
+    transition: all 0.35s ease;
+}
+
+.btn-outline-primary {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-outline-danger {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.btn-outline-danger:hover {
+    background-color: #e74c3c;
+    color: white;
+}
