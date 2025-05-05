@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+/* Toastr Customization */
+.toast-container .ngx-toastr {
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+.toast-container .toast-success {
+  background: #28a745;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+.toast-container .toast-error {
+  background: #dc3545;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+.toast-container .toast-warning {
+  background: #ffc107;
+  color: #000000 !important;
+  background-image: none !important;
+}
+
+.toast-container .toast-info {
+  background: #17a2b8;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+.toast-progress {
+  height: 4px;
+  opacity: 0.8;
+}
+
+.toast-close-button {
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.8;
+  color:black;
+}
+
+.toast-close-button:hover {
+  opacity: 1;
+}
+
+.toast-message {
+  padding: 0 10px;
+  color: #ffffff;
+}
+
+.toast-close-button {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.toast-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}

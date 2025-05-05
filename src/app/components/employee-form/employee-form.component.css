@@ -1,0 +1,138 @@
+.employee-form-card {
+  background-color: #1f1f2e;
+  color: #d0d0d0;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  animation: fadeInLeft 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInField {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #64b5f6;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form-control {
+  border-radius: 0.75rem;
+  padding: 0.9rem;
+  background-color: #2a2a3c;
+  color: #e0e0e0;
+  border: 1px solid #3d3d5c;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #64b5f6;
+  outline: none;
+  box-shadow: 0 0 8px rgba(100, 181, 246, 0.5);
+}
+
+.invalid-feedback {
+  color: #ef5350;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: #64b5f6;
+  border-color: #64b5f6;
+  color: #1e1e2f;
+}
+
+.btn-primary:hover {
+  background-color: #42a5f5;
+}
+
+.btn-secondary {
+  background-color: #5c6bc0;
+  border-color: #5c6bc0;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #3f4a8a;
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .form-control {
+    padding: 0.7rem;
+  }
+}
+
+.input-container {
+  opacity: 0;
+  animation: fadeInField 0.5s ease-out forwards;
+}
+
+.input-container:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.input-container:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.input-container:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.input-container:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.text-danger {
+  font-size: 0.875rem;
+}

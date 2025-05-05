@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeService } from '../../services/employee.service';
-import { Employee } from '../../models/employee';  // Add this import
+import { Employee } from '../../models/employee';
 
 @Component({
   selector: 'app-employee-list',
@@ -9,7 +9,7 @@ import { Employee } from '../../models/employee';  // Add this import
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  employees: Employee[] = [];  // Update type
+  employees: Employee[] = [];
   errorMessage: string = '';
 
   constructor(
@@ -33,11 +33,11 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
-  onEdit(id: number) {
+  onEdit(id: number): void {
     this.router.navigate(['/employees/edit', id]);
   }
 
-  onAdd() {
+  onAdd(): void {
     this.router.navigate(['/employees/add']);
   }
 

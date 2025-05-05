@@ -1,30 +1,56 @@
 <div class="container mt-4">
-  <div class="card">
+  <div class="card employee-form-card">
     <div class="card-header">
       <h2>{{ isEditMode ? 'Edit Employee' : 'Add Employee' }}</h2>
     </div>
     <div class="card-body">
       <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
-        <div class="mb-3">
+        <!-- First Name -->
+        <div class="mb-3 input-container">
           <label for="firstName" class="form-label">First Name</label>
-          <input type="text" class="form-control" id="firstName" formControlName="firstName">
+          <input type="text" class="form-control" id="firstName" formControlName="firstName"
+            placeholder="Enter first name"
+            [ngClass]="{ 'is-invalid': employeeForm.get('firstName')?.invalid && employeeForm.get('firstName')?.touched }" />
+          <div *ngIf="employeeForm.get('firstName')?.invalid && employeeForm.get('firstName')?.touched"
+            class="text-danger">
+            <small *ngIf="employeeForm.get('firstName')?.errors?.['required']">First name is required.</small>
+          </div>
         </div>
 
-        <div class="mb-3">
+        <!-- Last Name -->
+        <div class="mb-3 input-container">
           <label for="lastName" class="form-label">Last Name</label>
-          <input type="text" class="form-control" id="lastName" formControlName="lastName">
+          <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Enter last name"
+            [ngClass]="{ 'is-invalid': employeeForm.get('lastName')?.invalid && employeeForm.get('lastName')?.touched }" />
+          <div *ngIf="employeeForm.get('lastName')?.invalid && employeeForm.get('lastName')?.touched"
+            class="text-danger">
+            <small *ngIf="employeeForm.get('lastName')?.errors?.['required']">Last name is required.</small>
+          </div>
         </div>
 
-        <div class="mb-3">
+        <!-- Email -->
+        <div class="mb-3 input-container">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" formControlName="email">
+          <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email"
+            [ngClass]="{ 'is-invalid': employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched }" />
+          <div *ngIf="employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched" class="text-danger">
+            <small *ngIf="employeeForm.get('email')?.errors?.['required']">Email is required.</small>
+            <small *ngIf="employeeForm.get('email')?.errors?.['email']">Invalid email format.</small>
+          </div>
         </div>
 
-        <div class="mb-3">
+        <!-- Position -->
+        <div class="mb-3 input-container">
           <label for="position" class="form-label">Position</label>
-          <input type="text" class="form-control" id="position" formControlName="position">
+          <input type="text" class="form-control" id="position" formControlName="position" placeholder="Enter position"
+            [ngClass]="{ 'is-invalid': employeeForm.get('position')?.invalid && employeeForm.get('position')?.touched }" />
+          <div *ngIf="employeeForm.get('position')?.invalid && employeeForm.get('position')?.touched"
+            class="text-danger">
+            <small *ngIf="employeeForm.get('position')?.errors?.['required']">Position is required.</small>
+          </div>
         </div>
 
+        <!-- Buttons -->
         <div class="d-flex gap-2">
           <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid">
             {{ isEditMode ? 'Update' : 'Create' }}
